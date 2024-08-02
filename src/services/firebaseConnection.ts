@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCwQM5iOt6dvVmDgDpoj29RoUxc45qW5kE",
-  authDomain: "tarefas-next-53172.firebaseapp.com",
-  projectId: "tarefas-next-53172",
-  storageBucket: "tarefas-next-53172.appspot.com",
-  messagingSenderId: "120087372090",
-  appId: "1:120087372090:web:8d512a59cea1552490f003"
-};
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID
+}
 
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp)
